@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pokeListFragment"
+    >
+
+    <fragment
+        android:id="@+id/pokeListFragment"
+        android:name="com.example.vk_test_intern.feature.ui.PokeListFragment"
+        android:label="PokeListFragment" >
+        <action
+            android:id="@+id/action_pokeListFragment_to_singlePokeFragment"
+            app:destination="@id/singlePokeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/singlePokeFragment"
+        android:name="com.example.vk_test_intern.feature.ui.SinglePokeFragment"
+        android:label="SinglePokeFragment" >
+
+        <argument
+            android:name="pokeName"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+
+</navigation>
